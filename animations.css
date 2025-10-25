@@ -1,0 +1,15 @@
+/* simple load-in keyframe */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(12px); }
+  to { opacity:1; transform: translateY(0); }
+}
+.card, .card-hero { animation: fadeUp 420ms ease both; }
+
+/* micro interactions */
+.btn-primary, .card-cta { transition: transform 160ms ease, box-shadow 160ms ease; }
+.btn-primary:active, .card-cta:active { transform: translateY(1px) scale(0.995); }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}
